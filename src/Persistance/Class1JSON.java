@@ -2,6 +2,8 @@ package Persistance;
 
 import Business.Class1;
 
+import java.util.ArrayList;
+
 public class Class1JSON implements Class1DAO {
 
     public Class1JSON() {
@@ -12,7 +14,10 @@ public class Class1JSON implements Class1DAO {
         //To do later
     }
     @Override
-    public Class1 readClass1() {
-        return null;    //To do later
+    public ArrayList<Class1> readAllClass1() {
+        ArrayList<Class1> classes = new ArrayList<Class1>();
+
+
+        return classes;    //To do later
     }
 }
