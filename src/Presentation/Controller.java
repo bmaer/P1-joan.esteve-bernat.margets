@@ -9,5 +9,16 @@ public class Controller {
         this.ui = ui;
         this.class1M = class1M;
     }
-    public void run(){}
+    public void run(){
+        ui.startUp();
+        if(class1M.checkFile() == true){
+
+
+        }
+        else{
+            ui.showError();
+            ui.closeUp();
+        }
+
+    }
 }
