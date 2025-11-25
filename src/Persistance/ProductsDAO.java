@@ -10,7 +10,7 @@ public interface ProductsDAO {
 
     public Product getProductById(String id);
 
-    public ArrayList<Product> searchByName(String category);
+    public ArrayList<Product> searchByBrandName(String category);
 
     public Boolean check();
 

@@ -52,8 +52,23 @@ public class ProductsJSONDAO implements ProductsDAO {
     }
 
     @Override
-    public ArrayList<Product> searchByName(String category){
-        return null;
+    public ArrayList<Product> searchByBrandName(String brand){
+        ArrayList<Product> products = new ArrayList<Product>();
+        ArrayList<Product> newProduct = new ArrayList<Product>();
+        try{
+            FileReader fr = new FileReader(path);
+            Type type = new TypeToken<ArrayList<Product>>(){}.getType();
+            products = gson.fromJson(fr, type);
+            for(int i = 0; products.size() > i; i++ ){
+                if(brand.equals(products.get(i).getBrand())){
+                    newProduct.add(products.get(i));
+                }
+            }
+        }
+        catch (Exception e){
+            return null;
+        }
+        return newProduct;
     }
 
     @Override

@@ -5,19 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3718f52-95e4-4819-b804-ea2b66f91d5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Business/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Persistance/ProductsDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Presentation/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Business/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Business/Provider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Business/ProviderProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Persistance/ClientsDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Persistance/ClientsJSONDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Persistance/ProvidersDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Persistance/ProvidersJSONDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Persistance/SalesCSVDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Persistance/SalesDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-joan.esteve-bernat.margets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/P1-joan.esteve-bernat.margets.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UML_Fase1/P1_F1_bernat.margets_joan.esteve2.asta" beforeDir="false" afterPath="$PROJECT_DIR$/UML_Fase1/P1_F1_bernat.margets_joan.esteve2.asta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Business/Class1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Business/Class1Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/Class1Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persistance/Class1DAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persistance/Class1JSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ProductsJSONDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Business/Class1Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Business/Class2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Business/Class3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/Sale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/ProductsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ProductsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/ProductsJSONDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ProductsJSONDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Presentation/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presentation/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Presentation/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presentation/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <list id="b9fdc8c9-e128-4dff-aa75-6fc4daab5b72" name="Changes by joesg" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +115,7 @@
       <workItem from="1758093752853" duration="82000" />
       <workItem from="1760508716029" duration="4989000" />
       <workItem from="1763393351256" duration="4662000" />
-      <workItem from="1764005325675" duration="8667000" />
+      <workItem from="1764005325675" duration="14891000" />
     </task>
     <servers />
   </component>
