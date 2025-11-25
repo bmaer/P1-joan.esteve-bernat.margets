@@ -1,6 +1,7 @@
 package Presentation;
 
 import Business.Product;
+import Business.Provider;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -47,7 +48,7 @@ public class UserInterface {
     public void showVerify(){
         System.out.println("Verifying local files...");
     }
-    public void showProduct(ArrayList<> providers, Product product){
+    public void showProduct(ArrayList<Provider> providers, Product product){
 
     }
 
