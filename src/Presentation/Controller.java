@@ -10,7 +10,7 @@ public class Controller {
         this.class1M = class1M;
     }
     public void run(){
-        ui.startUp();
+        ui.showStartUp();
         if(class1M.checkFile() == true){
 
 

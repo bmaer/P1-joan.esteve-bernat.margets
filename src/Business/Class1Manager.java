@@ -1,17 +1,17 @@
 package Business;
 
-import Persistance.Class1DAO;
+import Persistance.ProductsDAO;
 
 import java.util.ArrayList;
 
 
 public class Class1Manager {
-    Class1DAO class1DAO;
-    public Class1Manager(Class1DAO class1DAO) {
-        this.class1DAO = class1DAO;
+    ProductsDAO productsDAO;
+    public Class1Manager(ProductsDAO productsDAO) {
+        this.productsDAO = productsDAO;
     }
-    public ArrayList<Class1> getAllClass1(){
-        ArrayList<Class1> classes1 = this.class1DAO.readAllClass1();
+    public ArrayList<Product> getAllClass1(){
+        ArrayList<Product> classes1 = this.productsDAO.getAllProducts();
 
         return classes1;
     }

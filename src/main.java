@@ -1,7 +1,3 @@
-import Business.Class1Manager;
-import Persistance.Class1DAO;
-import Persistance.Class1JSON;
-import Presentation.Controller;
 import Presentation.UserInterface;
 
 public class main {
@@ -12,6 +8,6 @@ public class main {
         //Controller controller = new Controller(ui, manager);
         //controller.run();
         UserInterface ui = new UserInterface();
-        ui.startUp();
+        ui.showStartUp();
     }
 }
