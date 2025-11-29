@@ -2,10 +2,7 @@ package Persistance;
 
 import Business.Sale;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class SalesCSVDAO implements SalesDAO {
@@ -45,14 +42,21 @@ public class SalesCSVDAO implements SalesDAO {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            return null;
         }
         return sales;
     }
 
     @Override
     public void addSale(Sale sale){
-        try (FileWriter writer = new FileWriter(path, true)) {
+
+        try {
+            File file = new File(path);
+            boolean isFileCreated = file.isFile();
+            if (!isFileCreated) {
+                file.createNewFile();
+            }
+            FileWriter writer = new FileWriter(path, true);
             writer.write(
                     sale.getClient_id() + "," +
                             sale.getProduct_id() + "," +
@@ -60,7 +64,7 @@ public class SalesCSVDAO implements SalesDAO {
                             sale.getPurchase_date() + "\n"
             );
         } catch (IOException e) {
-            e.printStackTrace();
+
         }
 
     }

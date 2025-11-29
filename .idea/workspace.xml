@@ -5,9 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3718f52-95e4-4819-b804-ea2b66f91d5c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Presentation/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presentation/UserInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Business/PhoneNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Business/ShoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1-joan.esteve-bernat.margets/Business/Class1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1-joan.esteve-bernat.margets/Business/Class1Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1-joan.esteve-bernat.margets/Business/Class2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1-joan.esteve-bernat.margets/Business/Class3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1-joan.esteve-bernat.margets/Persistance/Class1DAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1-joan.esteve-bernat.margets/Persistance/Class1JSON.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1-joan.esteve-bernat.margets/Presentation/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1-joan.esteve-bernat.margets/Presentation/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1-joan.esteve-bernat.margets/Presentation/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1-joan.esteve-bernat.margets/Presentation/UserInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1-joan.esteve-bernat.margets/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1-joan.esteve-bernat.margets/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Business/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Business/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/ClientsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ClientsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/ClientsJSONDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ClientsJSONDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/ProductsJSONDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ProductsJSONDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/ProvidersJSONDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ProvidersJSONDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/SalesCSVDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/SalesCSVDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presentation/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presentation/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
-    <list id="b9fdc8c9-e128-4dff-aa75-6fc4daab5b72" name="Changes by joesg" comment="" />
+    <list id="b9fdc8c9-e128-4dff-aa75-6fc4daab5b72" name="Changes by joesg" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Persistance/ProvidersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ProvidersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presentation/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presentation/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presentation/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presentation/Menu.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +48,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Presentation/Controller.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="b3718f52-95e4-4819-b804-ea2b66f91d5c" />
+        <range start1="7" end1="7" start2="8" end2="12" changelist="b9fdc8c9-e128-4dff-aa75-6fc4daab5b72" />
+        <range start1="11" end1="12" start2="16" end2="18" changelist="b9fdc8c9-e128-4dff-aa75-6fc4daab5b72" />
+        <range start1="13" end1="19" start2="19" end2="22" changelist="b9fdc8c9-e128-4dff-aa75-6fc4daab5b72" />
+        <range start1="21" end1="21" start2="24" end2="28" changelist="b9fdc8c9-e128-4dff-aa75-6fc4daab5b72" />
+        <range start1="22" end1="22" start2="29" end2="33" changelist="b9fdc8c9-e128-4dff-aa75-6fc4daab5b72" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -38,6 +74,7 @@
     "Application.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/berna/.m2/repository/com/google/code/gson/gson/2.8.2/gson-2.8.2.jar",
     "node.js.detected.package.eslint": "true",
@@ -100,6 +137,8 @@
       <workItem from="1760508716029" duration="4989000" />
       <workItem from="1763393351256" duration="4662000" />
       <workItem from="1764005325675" duration="15241000" />
+      <workItem from="1764434269605" duration="801000" />
+      <workItem from="1764435109426" duration="6290000" />
     </task>
     <servers />
   </component>

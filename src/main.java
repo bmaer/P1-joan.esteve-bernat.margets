@@ -1,13 +1,15 @@
+import Business.Provider;
+import Persistance.*;
 import Presentation.UserInterface;
+import Business.Provider;
+import Business.Product;
+import Business.Client;
+import Business.Sale;
+import java.util.ArrayList;
 
 public class main {
     public static void main(String[] args) {
-        //Class1DAO dao = new Class1JSON();
-        //UserInterface ui = new UserInterface();
-        //Class1Manager manager = new Class1Manager(dao);
-        //Controller controller = new Controller(ui, manager);
-        //controller.run();
-        UserInterface ui = new UserInterface();
-        ui.showStartUp();
+
+
     }
 }

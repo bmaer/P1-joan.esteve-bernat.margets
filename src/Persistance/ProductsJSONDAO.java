@@ -13,6 +13,8 @@ import java.util.ArrayList;
 public class ProductsJSONDAO implements ProductsDAO {
     private static final String path = "src/Persistance/products.json";
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+
     public ProductsJSONDAO() {
     }
 
@@ -27,7 +29,7 @@ public class ProductsJSONDAO implements ProductsDAO {
         catch (Exception e){
             return null;
         }
-        return products;    //To do later
+        return products;
     }
 
     @Override
@@ -76,6 +78,7 @@ public class ProductsJSONDAO implements ProductsDAO {
         File file = new File(path);
         return file.exists();
     }
+
 
 
 }

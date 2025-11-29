@@ -11,6 +11,11 @@ public class ProductManager {
         this.productsDAO = productsDAO;
     }
 
+    public ArrayList<Product> listAllProducts() {
+        return productsDAO.getAllProducts();
+    }
+
+
 
     public boolean checkFile() {
         return productsDAO.check();
