@@ -24,4 +24,14 @@ public class Client {
     }
     public Client (){}
 
+    public void setClient_id(int client_id) {
+        this.client_id = client_id;
+    }
+    public void setFull_name(String full_name) {
+        this.full_name = full_name;
+    }
+    public void setPhone_numbers(ArrayList<PhoneNumber> phone_numbers) {
+        this.phone_numbers = phone_numbers;
+    }
+
 }

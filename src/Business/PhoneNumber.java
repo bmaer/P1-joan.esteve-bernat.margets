@@ -16,4 +16,11 @@ public class PhoneNumber {
     }
     public PhoneNumber(){}
 
+    public void setNumber(String number) {
+        this.number = number;
+    }
+    public void setCountry_prefix(String country_prefix) {
+        this.country_prefix = country_prefix;
+    }
+
 }

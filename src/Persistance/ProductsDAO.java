@@ -12,6 +12,8 @@ public interface ProductsDAO {
 
     public ArrayList<Product> searchByBrandName(String category);
 
+    public ArrayList<Product> searchByName(String name);
+
     public Boolean check();
 
 

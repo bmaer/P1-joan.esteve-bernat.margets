@@ -17,4 +17,9 @@ public ArrayList<Sale> getAllSales() {
         return salesDAO.getAllSales();
 }
 
+public void AddSale(Sale sale){
+        salesDAO.addSale(sale);
+}
+
+
 }

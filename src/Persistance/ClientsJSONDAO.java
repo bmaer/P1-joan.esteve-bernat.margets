@@ -79,5 +79,24 @@ public class ClientsJSONDAO implements ClientsDAO {
 
         return client;
     }
+
+    @Override
+    public boolean checkClientName(String name) {
+        ArrayList<Client> clients = listAllClients();
+
+
+        if (clients == null || clients.isEmpty()) {
+            return false;
+        }
+
+        for (Client c : clients) {
+            if (c.getFull_name().equalsIgnoreCase(name)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 }
 

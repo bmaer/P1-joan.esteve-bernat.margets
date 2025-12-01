@@ -15,12 +15,19 @@ public class ClientManager {
         return clientsDAO.listAllClients();
     }
 
-    public Client getClientById(int client_id) {
-        return clientsDAO.getClientById(client_id);
+    public Client getClientById(int id) {
+        return clientsDAO.getClientById(id);
     }
 
-    public void addClient(Client client) {
-        clientsDAO.addClient(client);
+    public void addClient(Client newClient) {
+        clientsDAO.addClient(newClient);
+    }
+
+    public boolean checkClientName(String name) {
+        return clientsDAO.checkClientName(name);
+    }
+    public int getNewClientId() {
+        return clientsDAO.listAllClients().size() + 1;
     }
 
 }

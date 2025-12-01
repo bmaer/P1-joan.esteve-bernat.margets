@@ -15,8 +15,16 @@ public class UserInterface {
         System.out.print(message);
         return sc.nextLine();
     }
-    public int requestInt(String message) {
-        System.out.print(message);
+    public int requestInt(int option) {
+        if (option == 1) {
+            System.out.print("Choose an option: ");
+        }
+        else if (option == 2) {
+            System.out.print("Choose a provider: ");
+        }
+        else if (option == 3) {
+            System.out.print("Enter how many phone numbers you have: ");
+        }
         return sc.nextInt();
     }
     public void showList(ArrayList<String> items) {

@@ -11,14 +11,23 @@ public class ProductManager {
         this.productsDAO = productsDAO;
     }
 
-    public ArrayList<Product> listAllProducts() {
+    public ArrayList<Product> getAllProducts() {
         return productsDAO.getAllProducts();
     }
 
+    public Product getProductById(String id) {
+        return productsDAO.getProductById(id);
+    }
 
-
+    public ArrayList<Product> searchByBrandName(String category) {
+        return productsDAO.searchByBrandName(category);
+    }
     public boolean checkFile() {
         return productsDAO.check();
+    }
+
+    public ArrayList<Product> searchByName(String name) {
+        return productsDAO.searchByName(name);
     }
 
 

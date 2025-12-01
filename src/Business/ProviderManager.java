@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 
 public class ProviderManager {
+
     ProvidersDAO providersDAO;
     public ProviderManager(ProvidersDAO providersDAO) {
         this.providersDAO = providersDAO;
@@ -20,7 +21,9 @@ public class ProviderManager {
         return providersDAO.getProviderById(id);
     }
 
-
+    public ArrayList<ProviderProduct> getProductsForProvider(int providerId){
+        return providersDAO.getProductsForProvider(providerId);
+    }
     public boolean checkFile() {
         return providersDAO.check();
     }
