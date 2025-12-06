@@ -5,31 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3718f52-95e4-4819-b804-ea2b66f91d5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Business/ShoppingCartManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Persistance/ShoppingCartsJSONDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-joan.esteve-bernat.margets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/P1-joan.esteve-bernat.margets.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML_Fase1/P1_F1_bernat.margets_joan.esteve2.asta" beforeDir="false" afterPath="$PROJECT_DIR$/UML_Fase1/P1_F1_bernat.margets_joan.esteve2.asta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Business/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/ClientManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Business/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Business/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/Provider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Business/ProviderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/ProviderManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Business/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/Sale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Business/SaleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/SaleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Business/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/ShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persistance/ClientsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ClientsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persistance/ClientsJSONDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ClientsJSONDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persistance/ProductsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ProductsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persistance/ProductsJSONDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ProductsJSONDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persistance/ProvidersJSONDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ProvidersJSONDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persistance/SalesCSVDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/SalesCSVDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persistance/SalesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/SalesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persistance/clients.json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/clients.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persistance/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/products.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persistance/providers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/providers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persistance/sales.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/sales.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Presentation/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presentation/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Presentation/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presentation/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/ShoppingCartsJSONDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ShoppingCartsJSONDAO.java" afterDir="false" />
     </list>
     <list id="4f57b4bd-9dbb-406b-bb35-4a2144c9045a" name="Changes by joesg" comment="" />
     <option name="SHOW_DIALOG" value="false" />

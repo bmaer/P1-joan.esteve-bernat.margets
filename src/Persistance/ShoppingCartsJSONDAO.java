@@ -15,7 +15,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class ShoppingCartsJSONDAO {
-    private static String path = "Resources/providers.json";
+    private static String path = "Resources/ShoppingCarts.json";
     private Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
 

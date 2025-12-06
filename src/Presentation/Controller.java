@@ -158,7 +158,7 @@ public class Controller {
 
                 case 3://Opcion de buscar productos por proveedor
                     ui.showMessage(" Find products by provider");
-                    
+
 
 
                     break;
