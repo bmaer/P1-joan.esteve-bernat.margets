@@ -57,13 +57,41 @@ public class UserInterface {
         System.out.println("Verifying local files...");
     }
     public void showProduct(ArrayList<Provider> providers, Product product){
-
+        System.out.println("\nProduct id: " + product.getProduct_id());
+        System.out.println("Name: " + product.getProduct_name());
+        System.out.println("Brand: " + product.getBrand());
+        System.out.println("Model: " + product.getModel());
+        System.out.println("Providers: ");
+        for (int i = 0; i < providers.size(); i++) {
+            System.out.println("\t"+i+") "+providers.get(i).getCompany_name());
+            System.out.println("\t\t- Sale price: "+ providers.get(i).getProductById(product.getProduct_id()).getSelling_price() + "€,");
+            System.out.println("\t\t- Available stock: " + providers.get(i).getProductById(product.getProduct_id()).getUnits_in_stock());
+        }
+        System.out.println("\n");
     }
 
     public void closeUp(){
         System.out.println("Closing...");
     }
 
+    public void showUserData(int clientId, String userName, ArrayList<String> phoneNumbers){
+        System.out.println("--| User profile |--\n");
+        System.out.println("Client ID: " + clientId);
+        System.out.println("Full Name: " + userName);
+        System.out.println("Phone Numbers:");
+        for (String phoneNumber : phoneNumbers) {
+            System.out.println("\t" + phoneNumber);
+        }
+    }
+    public void showUserHistory(ArrayList<String> productName, ArrayList<String> brandName, ArrayList<String> modelName, ArrayList<String> time, ArrayList<String> price){
+        System.out.println("\nShopping History:");
+        for(int i = 0; i < productName.size();i++){
+            System.out.println("\t" + productName.get(i) + " - " + brandName.get(i)
+                    + " (" + modelName.get(i) + ") - € " + price.get(i) + " - "
+                    + time.get(i));
+        }
+
+    }
 
 
 }

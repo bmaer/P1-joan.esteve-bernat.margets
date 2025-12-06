@@ -10,5 +10,5 @@ public interface ClientsDAO {
     public ArrayList<Client> listAllClients();
     public Client getClientById(int id);
     public boolean checkClientName(String name);
-
+    public Client getClientByName(String name);
 }

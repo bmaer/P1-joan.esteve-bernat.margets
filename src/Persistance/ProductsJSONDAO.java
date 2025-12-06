@@ -11,7 +11,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class ProductsJSONDAO implements ProductsDAO {
-    private static final String path = "src/Persistance/products.json";
+    private static final String path = "Resources/products.json";
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
 
@@ -52,6 +52,30 @@ public class ProductsJSONDAO implements ProductsDAO {
         }
         return product;
     }
+
+    @Override
+    public ArrayList<Product> getProductsByIds(ArrayList<String> id){
+        ArrayList<Product> products = new ArrayList<Product>();
+        ArrayList<Product> filteredProducts = new ArrayList<Product>();
+        try{
+            FileReader fr = new FileReader(path);
+            Type type = new TypeToken<ArrayList<Product>>(){}.getType();
+            products = gson.fromJson(fr, type);
+            for(int i = 0; id.size() > i; i++ ) {
+                for (int j = 0; products.size() > j; j++) {
+                    if (id.get(i).equals(products.get(j).getProduct_id())) {
+                        filteredProducts.add(products.get(j));
+
+                    }
+                }
+            }
+        }
+        catch (Exception e){
+            return null;
+        }
+        return filteredProducts;
+    }
+
 
     @Override
     public ArrayList<Product> searchByBrandName(String brand){

@@ -44,4 +44,13 @@ public class Provider {
     public ArrayList<ProviderProduct> getProducts_for_sale() {
         return products_for_sale;
     }
+    public ProviderProduct getProductById(String id) {
+        ProviderProduct p = null;
+        for(int i = 0; i < products_for_sale.size(); i++) {
+            if(id.equals(products_for_sale.get(i).getProduct_id())) {
+                p = products_for_sale.get(i);
+            }
+        }
+        return p;
+    }
 }

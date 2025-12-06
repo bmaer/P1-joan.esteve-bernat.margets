@@ -30,5 +30,9 @@ public class ProductManager {
         return productsDAO.searchByName(name);
     }
 
+    public ArrayList<Product> getProductsByIds(ArrayList<String> productIds){
+        return productsDAO.getProductsByIds(productIds);
+    }
+
 
 }

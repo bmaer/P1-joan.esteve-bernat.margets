@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class SalesCSVDAO implements SalesDAO {
-    private static final String path = "src/Persistance/Sales.csv";
+    private static final String path = "Resources/Sales.csv";
 
 
     public SalesCSVDAO() {}
@@ -34,7 +34,7 @@ public class SalesCSVDAO implements SalesDAO {
 
                 int clientId = Integer.parseInt(parts[0]);
                 String productId = parts[1];
-                double pricePaid = Double.parseDouble(parts[2]);
+                float pricePaid = Float.parseFloat(parts[2]);
                 long purchaseDate = Long.parseLong(parts[3]);
 
                 Sale sale = new Sale(clientId, pricePaid, purchaseDate, productId);
@@ -67,5 +67,17 @@ public class SalesCSVDAO implements SalesDAO {
 
         }
 
+    }
+
+    @Override
+    public ArrayList<Sale> getSalesByClientId(int clientId){
+        ArrayList<Sale> sales = getAllSales();
+        for (Sale sale : sales) {
+            if(sale.getClient_id() != clientId){
+                sales.remove(sale);
+            }
+        }
+
+        return sales;
     }
 }

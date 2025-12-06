@@ -5,22 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3718f52-95e4-4819-b804-ea2b66f91d5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Business/ShoppingCartManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Persistance/ShoppingCartsJSONDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Business/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Business/PhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/PhoneNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Presentation/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presentation/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Presentation/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presentation/UserInterface.java" afterDir="false" />
-    </list>
-    <list id="4f57b4bd-9dbb-406b-bb35-4a2144c9045a" name="Changes by joesg" comment="">
+      <change beforePath="$PROJECT_DIR$/P1-joan.esteve-bernat.margets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/P1-joan.esteve-bernat.margets.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML_Fase1/P1_F1_bernat.margets_joan.esteve2.asta" beforeDir="false" afterPath="$PROJECT_DIR$/UML_Fase1/P1_F1_bernat.margets_joan.esteve2.asta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Business/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/ClientManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Business/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Business/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/Provider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Business/ProviderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/ProviderManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Business/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/Sale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Business/SaleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/SaleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Business/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Business/ShoppingCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Persistance/ClientsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ClientsDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Persistance/ClientsJSONDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ClientsJSONDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Persistance/ProductsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ProductsDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Persistance/ProductsJSONDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ProductsJSONDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/ProvidersJSONDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/ProvidersJSONDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/SalesCSVDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/SalesCSVDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/SalesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persistance/SalesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/clients.json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/clients.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/providers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/providers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persistance/sales.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/sales.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presentation/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presentation/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presentation/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presentation/UserInterface.java" afterDir="false" />
     </list>
+    <list id="4f57b4bd-9dbb-406b-bb35-4a2144c9045a" name="Changes by joesg" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,26 +57,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/berna/.m2/repository/com/google/code/gson/gson/2.8.2/gson-2.8.2.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/UNI/2n de Carrera/Programació 2 (programació orientada a objectes)/Practiques/P1_F4_bernat.margets_aitor.garcia/P1_F4_bernat.margets_aitor.garcia1/Practica-1_F4&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\UNI\2n de Carrera\Programació 2 (programació orientada a objectes)\Practiques\P1-joan.esteve-bernat.margets\Resources" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main" />
@@ -116,6 +132,8 @@
       <workItem from="1764005325675" duration="15241000" />
       <workItem from="1764434269605" duration="801000" />
       <workItem from="1764435109426" duration="12098000" />
+      <workItem from="1764665786889" duration="882000" />
+      <workItem from="1764697262150" duration="13471000" />
     </task>
     <servers />
   </component>

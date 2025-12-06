@@ -30,4 +30,17 @@ public class ClientManager {
         return clientsDAO.listAllClients().size() + 1;
     }
 
+    public Client getClientByName(String name) {
+        return clientsDAO.getClientByName(name);
+    }
+
+    public ArrayList<String> convertPhoneNumbersToStrings(Client client) {
+        ArrayList<String> formatedNumbers = new ArrayList<String>();
+        for (int i = 0; i < client.getPhone_numbers().size(); i++ ){
+            formatedNumbers.add(i, "(" + client.getPhone_numbers().get(i).getCountry_prefix() + ") " + client.getPhone_numbers().get(i).getNumber());
+        }
+        return formatedNumbers;
+    }
+
+
 }

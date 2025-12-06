@@ -2,13 +2,13 @@ package Business;
 
 public class Sale {
     private int client_id;
-    private double price_paid;
+    private float price_paid;
     private long purchase_date;
     private String product_id;
 
     public Sale() {}
 
-    public Sale(int client_id, double price_paid, long purchase_date, String product_id) {
+    public Sale(int client_id, float price_paid, long purchase_date, String product_id) {
         this.client_id = client_id;
         this.price_paid = price_paid;
         this.purchase_date = purchase_date;
@@ -17,7 +17,7 @@ public class Sale {
     public int getClient_id() {
         return client_id;
     }
-    public double getPrice_paid() {
+    public float getPrice_paid() {
         return price_paid;
     }
     public long getPurchase_date() {

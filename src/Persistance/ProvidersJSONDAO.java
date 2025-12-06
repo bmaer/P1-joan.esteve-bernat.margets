@@ -14,7 +14,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class ProvidersJSONDAO implements ProvidersDAO {
-    private static String path = "src/Persistance/providers.json";
+    private static String path = "Resources/providers.json";
     private Gson gson = new Gson();
 
 

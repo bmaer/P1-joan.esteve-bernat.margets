@@ -16,5 +16,6 @@ public interface ProductsDAO {
 
     public Boolean check();
 
+    public ArrayList<Product> getProductsByIds(ArrayList<String> id);
 
 }

@@ -9,4 +9,6 @@ public interface SalesDAO {
     public ArrayList<Sale> getAllSales();
 
     public void addSale(Sale sale);
+
+    public ArrayList<Sale> getSalesByClientId(int clientId);
 }

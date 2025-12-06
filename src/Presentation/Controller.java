@@ -10,16 +10,18 @@ public class Controller {
     ClientManager clientsM;
     ProviderManager providerM;
     SaleManager saleM;
+    ShoppingCartManager cartM;
 
     public Controller() {
     }
 
-    public Controller(UserInterface ui, ProductManager productsM, ProviderManager providerM, ClientManager clientM, SaleManager saleM) {
+    public Controller(UserInterface ui, ProductManager productsM, ProviderManager providerM, ClientManager clientM, SaleManager saleM, ShoppingCartManager cartM) {
         this.ui = ui;
         this.productsM = productsM;
         this.providerM = providerM;
         this.clientsM = clientM;
         this.saleM = saleM;
+        this.cartM = cartM;
     }
 
     public void run() {
@@ -88,14 +90,31 @@ public class Controller {
             int option = ui.requestInt(1);
             switch (option) {
                 case 1://Opcion del User profile
-                    ui.showMessage(" User profile");
+
+                    ui.showUserData(clientsM.getClientByName(clientName).getClient_id(),clientName,
+                            clientsM.convertPhoneNumbersToStrings(clientsM.getClientByName(clientName)));
+                    ArrayList<String> ids = new ArrayList<String>();
+                    ArrayList<String> times = new ArrayList<String>();
+                    ArrayList<String> prices = new ArrayList<String>();
+                    for(int i=0; i< saleM.getSalesByClientId(clientsM.getClientByName(clientName).getClient_id()).size(); i++){
+                           ids.add(saleM.getSalesByClientId(clientsM.getClientByName(clientName).getClient_id()).get(i).getProduct_id());
+                           times.add(saleM.convertSaleTimeStamp(saleM.getSalesByClientId(clientsM.getClientByName(clientName).getClient_id()).get(i)));
+                           prices.add(Float.toString(saleM.getSalesByClientId(clientsM.getClientByName(clientName).getClient_id()).get(i).getPrice_paid()));
+                    }
+                    ArrayList<String> productNames = new ArrayList<String>();
+                    ArrayList<String> brandNames = new ArrayList<String>();
+                    ArrayList<String> modelNames = new ArrayList<String>();
+                    for(int i =0; productsM.getProductsByIds(ids).size() >i; i++){
+                        productNames.add(productsM.getProductsByIds(ids).get(i).getProduct_name());
+                        brandNames.add(productsM.getProductsByIds(ids).get(i).getBrand());
+                        modelNames.add(productsM.getProductsByIds(ids).get(i).getModel());
+                    }
+                    ui.showUserHistory(productNames,brandNames,modelNames,times,prices);
                     break;
 
                 case 2://Opcion de buscar productos por nombre
-                ui.showMessage("Find products by name ");
-                String ProductName = ui.requestString("Search criteria");
-
-                productsM.searchByName(ProductName);
+                    String ProductName = ui.requestString("Search criteria:");
+                    productsM.searchByName(ProductName);
                     ArrayList<Product> results = productsM.searchByName(ProductName);
 
                     if (results == null || results.isEmpty()) {
@@ -112,17 +131,34 @@ public class Controller {
                     if (option2 == 0) {
                         break;
                     }
-                    if (option < 1 || option > results.size()) {
+                    if (option2 < 1 || option2 > results.size()) {
                         ui.showMessage("Invalid option");
                         break;
                     }
-                    //Esta sin acabar
+                    else{
+                        ArrayList<Provider> providers = providerM.getProvidersByProductId(results.get(option2).getProduct_id());
+                        ui.showProduct(providers, results.get(option2));
+                        String response = ui.requestString("Do you want to add this product to the shopping cart? ");
+                        if(response.equals("Yes")) {
+                            int selectedP = 0;
+                            selectedP = ui.requestInt(2);
+                            if (cartM.checkCartExists(clientsM.getClientByName(clientName).getClient_id())) {
+                                cartM.updateShoppingCart(clientsM.getClientByName(clientName).getClient_id(),results.get(option2),providers.get(selectedP));
+                            }
+                            else{
+                                ShoppingCart cart = new ShoppingCart(clientsM.getClientByName(clientName).getClient_id(), results.get(option2),providers.get(selectedP));
+                                cartM.writeNewShoppingCart(cart);
+                                ui.showMessage("\nProduct added to shopping cart");
+                            }
+                        }
+                    }
+
 
                     break;
 
                 case 3://Opcion de buscar productos por proveedor
-                ui.showMessage(" Find products by provider");
-
+                    ui.showMessage(" Find products by provider");
+                    
 
 
                     break;

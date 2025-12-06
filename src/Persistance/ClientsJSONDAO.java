@@ -14,7 +14,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class ClientsJSONDAO implements ClientsDAO {
-    private static final String path = "src/Persistance/clients.json";
+    private static final String path = "Resources/clients.json";
     private Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
 
@@ -71,6 +71,27 @@ public class ClientsJSONDAO implements ClientsDAO {
                 if (id == clients.get(i).getClient_id()) {
                     client = clients.get(i);
 
+                }
+            }
+        } catch (Exception e) {
+            return null;
+        }
+
+        return client;
+    }
+
+    @Override
+    public Client getClientByName(String name) {
+        ArrayList<Client> clients = new ArrayList<Client>();
+        Client client = null;
+        try {
+            FileReader fr = new FileReader(path);
+            Type type = new TypeToken<ArrayList<Client>>() {
+            }.getType();
+            clients = gson.fromJson(fr, type);
+            for (int i = 0; clients.size() > i; i++) {
+                if (name.equals(clients.get(i).getFull_name())) {
+                    client = clients.get(i);
                 }
             }
         } catch (Exception e) {
