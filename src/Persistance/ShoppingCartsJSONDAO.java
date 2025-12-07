@@ -1,5 +1,6 @@
 package Persistance;
 
+import Business.Client;
 import Business.Product;
 import Business.Provider;
 import Business.ShoppingCart;
@@ -24,14 +25,23 @@ public class ShoppingCartsJSONDAO {
     public ShoppingCart getShoppingCartByClientId(int clientId){
         ArrayList<ShoppingCart> carts = new ArrayList<ShoppingCart>();
         ShoppingCart cart = null;
-        try{
-            FileReader fr = new FileReader(path);
-            Type type = new TypeToken<ArrayList<ShoppingCart>>(){}.getType();
-            carts = gson.fromJson(fr, type);
-            for(int i = 0; carts.size() > i; i++ ){
-                if(clientId == carts.get(i).getClientId()){
-                    cart = carts.get(i);
+        try {
+            File file = new File(path);
 
+            if (!file.isFile()) {
+                file.createNewFile();
+            }
+
+            FileReader fr = new FileReader(path);
+            Type type = new TypeToken<ArrayList<ShoppingCart>>() {
+            }.getType();
+            carts = gson.fromJson(fr, type);
+            if (carts != null){
+                for (int i = 0; carts.size() > i; i++) {
+                    if (clientId == carts.get(i).getClientId()) {
+                        cart = carts.get(i);
+
+                    }
                 }
             }
         }
@@ -52,15 +62,19 @@ public class ShoppingCartsJSONDAO {
             Type type = new TypeToken<ArrayList<ShoppingCart>>() {
             }.getType();
             ArrayList<ShoppingCart> writerArray = gson.fromJson(reader, type);
-            writerArray.add(cart);
-
-
+            if(writerArray == null){
+                ArrayList<ShoppingCart> list2 = new ArrayList<ShoppingCart>();
+                list2.add(cart);
+                writerArray = list2;
+            }
+            else{
+                writerArray.add(cart);
+            }
             String json = gson.toJson(writerArray);
-
-
             FileWriter fw = new FileWriter(file);
             fw.write(json);
             fw.close();
+
         } catch (IOException f) {}
     }
 
@@ -100,5 +114,7 @@ public class ShoppingCartsJSONDAO {
         deleteShoppingCartByClientId(clientId);
         writeNewShoppingCart(cart);
     }
+
+
 
 }

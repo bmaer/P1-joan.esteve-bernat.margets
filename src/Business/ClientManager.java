@@ -23,8 +23,8 @@ public class ClientManager {
         clientsDAO.addClient(newClient);
     }
 
-    public boolean checkClientName(String name) {
-        return clientsDAO.checkClientName(name);
+    public boolean checkClient(String name, int id) {
+        return clientsDAO.checkClient(name, id);
     }
     public int getNewClientId() {
         return clientsDAO.listAllClients().size() + 1;

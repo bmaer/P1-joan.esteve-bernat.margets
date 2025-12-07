@@ -30,8 +30,13 @@ public class ClientsJSONDAO implements ClientsDAO {
             Type type = new TypeToken<ArrayList<Client>>() {
             }.getType();
             ArrayList<Client> writerArray = gson.fromJson(reader, type);
-            writerArray.add(newClient);
-
+            if(writerArray == null) {
+                ArrayList<Client> newArray = new ArrayList<>();
+                newArray.add(newClient);
+                writerArray = newArray;
+            }else{
+                writerArray.add(newClient);
+            }
 
             String json = gson.toJson(writerArray);
 
@@ -102,7 +107,7 @@ public class ClientsJSONDAO implements ClientsDAO {
     }
 
     @Override
-    public boolean checkClientName(String name) {
+    public boolean checkClient(String name, int id) {
         ArrayList<Client> clients = listAllClients();
 
 
@@ -111,7 +116,7 @@ public class ClientsJSONDAO implements ClientsDAO {
         }
 
         for (Client c : clients) {
-            if (c.getFull_name().equalsIgnoreCase(name)) {
+            if (c.getFull_name().equalsIgnoreCase(name) && c.getClient_id() == id) {
                 return true;
             }
         }

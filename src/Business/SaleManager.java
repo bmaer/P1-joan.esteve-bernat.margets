@@ -32,7 +32,8 @@ public class SaleManager {
             .format(fmt);
 
     return timeStamp;
-}
+    }
+
 
 
     public ArrayList<Sale> getSalesByClientId(int clientId){

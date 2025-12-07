@@ -6,8 +6,8 @@ import java.util.ArrayList;
 //Seria un arxiu json si no el podem tenir en ram.
 public class ShoppingCart {
     private int clientId;
-    private ArrayList<Product> products;
-    private ArrayList<Provider> providers;
+    private ArrayList<Product> products = new ArrayList<Product>();
+    private ArrayList<Provider> providers = new ArrayList<Provider>();
     public ShoppingCart() {
     }
 

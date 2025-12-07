@@ -11,6 +11,7 @@ public interface ProvidersDAO {
 
     public ArrayList<ProviderProduct> getProductsForProvider(int providerId);
 
+
     public Boolean check();
 
 }

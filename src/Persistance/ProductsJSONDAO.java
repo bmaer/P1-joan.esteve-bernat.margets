@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class ProductsJSONDAO implements ProductsDAO {
     private static final String path = "Resources/products.json";
@@ -55,23 +56,15 @@ public class ProductsJSONDAO implements ProductsDAO {
 
     @Override
     public ArrayList<Product> getProductsByIds(ArrayList<String> id){
-        ArrayList<Product> products = new ArrayList<Product>();
+        ArrayList<Product> products = getAllProducts();
         ArrayList<Product> filteredProducts = new ArrayList<Product>();
-        try{
-            FileReader fr = new FileReader(path);
-            Type type = new TypeToken<ArrayList<Product>>(){}.getType();
-            products = gson.fromJson(fr, type);
-            for(int i = 0; id.size() > i; i++ ) {
-                for (int j = 0; products.size() > j; j++) {
-                    if (id.get(i).equals(products.get(j).getProduct_id())) {
-                        filteredProducts.add(products.get(j));
+        for(int i = 0; id.size() > i; i++ ) {
+            for (int j = 0; products.size() > j; j++) {
+                if (id.get(i).equals(products.get(j).getProduct_id())) {
+                    filteredProducts.add(products.get(j));
 
-                    }
                 }
             }
-        }
-        catch (Exception e){
-            return null;
         }
         return filteredProducts;
     }
@@ -101,12 +94,17 @@ public class ProductsJSONDAO implements ProductsDAO {
     public ArrayList<Product> searchByName(String name){
         ArrayList<Product> products = new ArrayList<Product>();
         ArrayList<Product> newProduct = new ArrayList<Product>();
+        String nName = name.toLowerCase(Locale.ROOT);
         try{
             FileReader fr = new FileReader(path);
             Type type = new TypeToken<ArrayList<Product>>(){}.getType();
             products = gson.fromJson(fr, type);
             for(int i = 0; products.size() > i; i++ ){
-                if(name.equals(products.get(i).getProduct_name())){
+                String[] parts = products.get(i).getProduct_name().split(" ");
+                if(name.equals(parts[0].toLowerCase(Locale.ROOT))){
+                    newProduct.add(products.get(i));
+                }
+                if(name.equals(parts[1].toLowerCase(Locale.ROOT))){
                     newProduct.add(products.get(i));
                 }
             }

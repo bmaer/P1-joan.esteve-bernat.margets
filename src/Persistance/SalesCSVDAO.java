@@ -63,6 +63,9 @@ public class SalesCSVDAO implements SalesDAO {
                             sale.getPrice_paid() + "," +
                             sale.getPurchase_date() + "\n"
             );
+
+
+            writer.close();
         } catch (IOException e) {
 
         }
@@ -72,12 +75,12 @@ public class SalesCSVDAO implements SalesDAO {
     @Override
     public ArrayList<Sale> getSalesByClientId(int clientId){
         ArrayList<Sale> sales = getAllSales();
-        for (Sale sale : sales) {
-            if(sale.getClient_id() != clientId){
-                sales.remove(sale);
+        ArrayList<Sale> userSales = new ArrayList<Sale>();
+        for(int i = 0; i < sales.size(); i++){
+            if(sales.get(i).getClient_id() == clientId){
+                userSales.add(sales.get(i));
             }
         }
-
-        return sales;
+        return userSales;
     }
 }

@@ -33,6 +33,8 @@ public class ProvidersJSONDAO implements ProvidersDAO {
     }
 
 
+
+
     @Override
     public Provider getProviderById(int id){
         ArrayList<Provider> providers = new ArrayList<Provider>();
@@ -53,6 +55,8 @@ public class ProvidersJSONDAO implements ProvidersDAO {
         }
         return provider;
     }
+
+
 
     @Override
     public ArrayList<ProviderProduct> getProductsForProvider(int providerId){
