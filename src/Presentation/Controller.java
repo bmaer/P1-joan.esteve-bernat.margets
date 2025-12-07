@@ -115,7 +115,6 @@ public class Controller {
     /**
      * Ejecuta el menú principal de un usuario autenticado.
      * Permite acceder a perfil, búsqueda de productos, proveedores y carrito.
-     *
      * @param clientName Nombre completo del cliente autenticado.
      */
 
@@ -288,6 +287,12 @@ public class Controller {
             }
         }
     }
+
+    /**
+     * Maneja el registro de un nuevo cliente.
+     * Solicita nombre completo y números de teléfono, crea el cliente y lo agrega al sistema.
+     * @return El nombre del nuevo cliente registrado.
+     */
 
     private String handleRegister() {
         Client newClient = new Client();

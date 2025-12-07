@@ -6,7 +6,15 @@ import Business.Provider;
 
 import java.util.ArrayList;
 
+/**
+ * Clase principal que inicializa los componentes del sistema y arranca el programa.
+ */
 public class main {
+
+    /**
+     * Método principal que se ejecuta al iniciar la aplicación.
+     * @param args Argumentos de la línea de comandos.
+     */
     public static void main(String[] args) {
         ClientsDAO c = new ClientsJSONDAO();
         ProductsDAO p = new ProductsJSONDAO();

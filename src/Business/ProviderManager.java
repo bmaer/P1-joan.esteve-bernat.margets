@@ -5,7 +5,9 @@ import Persistance.ProvidersDAO;
 
 import java.util.ArrayList;
 
-
+/**
+ * Clase que gestiona las operaciones relacionadas con los proveedores.
+ */
 public class ProviderManager {
 
     ProvidersDAO providersDAO;
@@ -13,24 +15,47 @@ public class ProviderManager {
         this.providersDAO = providersDAO;
     }
 
+    /**
+     * Obtiene todos los proveedores registrados.
+     * @return Lista de proveedores.
+     */
     public ArrayList<Provider> getAllProviders(){
         return providersDAO.getAllProviders();
     }
 
-
-
-
+    /**
+     * Obtiene un proveedor por su ID.
+     * @param id ID del proveedor.
+     * @return Proveedor correspondiente, o null si no se encuentra.
+     */
     public Provider getProvidersById(int id){
         return providersDAO.getProviderById(id);
     }
 
+    /**
+     * Obtiene todos los productos de un proveedor específico.
+     * @param providerId ID del proveedor.
+     * @return Lista de productos del proveedor, o null si ocurre un error.
+     */
     public ArrayList<ProviderProduct> getProductsForProvider(int providerId){
         return providersDAO.getProductsForProvider(providerId);
     }
+
+
+    /**
+     * Comprueba si el archivo de proveedores existe.
+     * @return true si el archivo existe, false en caso contrario.
+     */
     public boolean checkFile() {
         return providersDAO.check();
     }
 
+
+    /**
+     * Obtiene todos los proveedores que venden un producto específico.
+     * @param productId ID del producto.
+     * @return Lista de proveedores que venden el producto.
+     */
     public ArrayList<Provider> getProvidersByProductId(String productId){
         ArrayList<Provider> providers = providersDAO.getAllProviders();
         int size = providers.size();
@@ -46,6 +71,11 @@ public class ProviderManager {
         return filteredProviders;
     }
 
+    /**
+     * Obtiene los productos de un proveedor dado su ID.
+     * @param providerId ID del proveedor.
+     * @return Lista de productos del proveedor, o null si no se encuentra.
+     */
     public ArrayList<ProviderProduct> getProductsByProviderId(int providerId) {
         ArrayList<Provider> providers = getAllProviders();
         if (providers == null) return null;

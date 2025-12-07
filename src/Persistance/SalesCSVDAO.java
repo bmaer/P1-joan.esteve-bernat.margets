@@ -5,12 +5,20 @@ import Business.Sale;
 import java.io.*;
 import java.util.ArrayList;
 
+/**
+ * Implementación de SalesDAO que gestiona las ventas usando un archivo CSV.
+ */
+
 public class SalesCSVDAO implements SalesDAO {
     private static final String path = "Resources/Sales.csv";
 
 
     public SalesCSVDAO() {}
 
+    /**
+     * Obtiene todas las ventas registradas en el archivo CSV.
+     * @return Lista de todas las ventas, o null si ocurre un error al leer el archivo.
+     */
     @Override
     public ArrayList<Sale> getAllSales(){
         ArrayList<Sale> sales = new ArrayList<Sale>();
@@ -47,6 +55,10 @@ public class SalesCSVDAO implements SalesDAO {
         return sales;
     }
 
+    /**
+     * Agrega una nueva venta al archivo CSV.
+     * @param sale Venta a agregar al registro.
+     */
     @Override
     public void addSale(Sale sale){
 
@@ -72,6 +84,11 @@ public class SalesCSVDAO implements SalesDAO {
 
     }
 
+    /**
+     * Obtiene todas las ventas realizadas por un cliente específico.
+     * @param clientId ID del cliente.
+     * @return Lista de ventas del cliente, vacía si no tiene ventas.
+     */
     @Override
     public ArrayList<Sale> getSalesByClientId(int clientId){
         ArrayList<Sale> sales = getAllSales();

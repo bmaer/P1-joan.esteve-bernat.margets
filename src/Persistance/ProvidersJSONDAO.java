@@ -13,10 +13,18 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+/**
+ * Implementación de ProvidersDAO que gestiona los proveedores usando un archivo JSON.
+ */
+
 public class ProvidersJSONDAO implements ProvidersDAO {
     private static String path = "Resources/providers.json";
     private Gson gson = new Gson();
 
+    /**
+     * Obtiene todos los proveedores registrados en el archivo JSON.
+     * @return Lista de proveedores, o null si ocurre un error al leer el archivo.
+     */
 
     @Override
     public ArrayList<Provider> getAllProviders() {
@@ -34,6 +42,11 @@ public class ProvidersJSONDAO implements ProvidersDAO {
 
 
 
+    /**
+     * Obtiene un proveedor específico por su ID.
+     * @param id ID del proveedor a buscar.
+     * @return Proveedor con el ID dado, o null si no se encuentra o ocurre un error.
+     */
 
     @Override
     public Provider getProviderById(int id){
@@ -57,6 +70,11 @@ public class ProvidersJSONDAO implements ProvidersDAO {
     }
 
 
+    /**
+     * Obtiene todos los productos que ofrece un proveedor específico.
+     * @param providerId ID del proveedor.
+     * @return Lista de productos del proveedor, o null si ocurre un error.
+     */
 
     @Override
     public ArrayList<ProviderProduct> getProductsForProvider(int providerId){
@@ -78,6 +96,10 @@ public class ProvidersJSONDAO implements ProvidersDAO {
         return providerProducts;
     }
 
+    /**
+     * Verifica si el archivo JSON de proveedores existe.
+     * @return true si el archivo existe, false en caso contrario.
+     */
     @Override
     public Boolean check(){
         File file = new File(path);

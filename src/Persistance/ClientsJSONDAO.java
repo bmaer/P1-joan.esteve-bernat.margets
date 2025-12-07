@@ -13,10 +13,19 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+
+/**
+ * Implementación de ClientsDAO que gestiona los clientes usando un archivo JSON.
+ */
+
 public class ClientsJSONDAO implements ClientsDAO {
     private static final String path = "Resources/clients.json";
     private Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
+    /**
+     * Agrega un nuevo cliente al archivo JSON.
+     * @param newClient Cliente a agregar.
+     */
 
     @Override
     public void addClient(Client newClient) {
@@ -47,6 +56,10 @@ public class ClientsJSONDAO implements ClientsDAO {
         } catch (IOException f) {}
     }
 
+    /**
+     * Obtiene todos los clientes registrados en el archivo JSON.
+     * @return Lista de clientes, o null si ocurre un error al leer el archivo.
+     */
     @Override
     public ArrayList<Client> listAllClients() {
         ArrayList<Client> clients= new ArrayList<Client>();
@@ -62,7 +75,11 @@ public class ClientsJSONDAO implements ClientsDAO {
     }
 
 
-
+    /**
+     * Obtiene un cliente específico por su ID.
+     * @param id ID del cliente a buscar.
+     * @return Cliente con el ID dado, o null si no se encuentra o ocurre un error.
+     */
     @Override
     public Client getClientById(int id) {
         ArrayList<Client> clients = new ArrayList<Client>();
@@ -85,6 +102,11 @@ public class ClientsJSONDAO implements ClientsDAO {
         return client;
     }
 
+    /**
+     * Obtiene un cliente específico por su nombre completo.
+     * @param name Nombre completo del cliente a buscar.
+     * @return Cliente con el nombre dado, o null si no se encuentra o ocurre un error.
+     */
     @Override
     public Client getClientByName(String name) {
         ArrayList<Client> clients = new ArrayList<Client>();
@@ -106,6 +128,12 @@ public class ClientsJSONDAO implements ClientsDAO {
         return client;
     }
 
+    /**
+     * Verifica si existe un cliente con un nombre y ID específicos.
+     * @param name Nombre completo del cliente.
+     * @param id ID del cliente.
+     * @return true si el cliente existe, false en caso contrario.
+     */
     @Override
     public boolean checkClient(String name, int id) {
         ArrayList<Client> clients = listAllClients();

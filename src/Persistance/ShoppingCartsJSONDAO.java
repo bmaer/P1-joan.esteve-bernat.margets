@@ -15,12 +15,22 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+/**
+ * Clase DAO para manejar los carritos de compra usando un archivo JSON.
+ */
+
 public class ShoppingCartsJSONDAO {
     private static String path = "Resources/ShoppingCarts.json";
     private Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
 
     public ShoppingCartsJSONDAO() {}
+
+    /**
+     * Obtiene el carrito de un cliente por su ID.
+     * @param clientId ID del cliente.
+     * @return Carrito del cliente, o null si no existe.
+     */
 
     public ShoppingCart getShoppingCartByClientId(int clientId){
         ArrayList<ShoppingCart> carts = new ArrayList<ShoppingCart>();
@@ -51,6 +61,11 @@ public class ShoppingCartsJSONDAO {
         return cart;
     }
 
+    /**
+     * Agrega un nuevo carrito de compra al archivo JSON.
+     * @param cart Carrito a agregar.
+     */
+
     public void writeNewShoppingCart(ShoppingCart cart){
         try {
             File file = new File(path);
@@ -77,6 +92,12 @@ public class ShoppingCartsJSONDAO {
 
         } catch (IOException f) {}
     }
+
+    /**
+     * Elimina el carrito de un cliente por su ID.
+     * @param clientId ID del cliente cuyo carrito se eliminará.
+     * @return true si se eliminó el carrito, false si no se encontró o hubo error.
+     */
 
     public Boolean deleteShoppingCartByClientId(int clientId){
         ArrayList<ShoppingCart> carts = new ArrayList<ShoppingCart>();
@@ -105,6 +126,13 @@ public class ShoppingCartsJSONDAO {
         }
         return false;
     }
+
+    /**
+     * Actualiza el carrito de un cliente agregando un nuevo producto y proveedor.
+     * @param clientId    ID del cliente.
+     * @param newProduct  Producto a agregar.
+     * @param newProvider Proveedor correspondiente al producto.
+     */
 
     public void updateShoppingCartByClientId(int clientId, Product newProduct, Provider newProvider){
         ShoppingCart cart = getShoppingCartByClientId(clientId);
